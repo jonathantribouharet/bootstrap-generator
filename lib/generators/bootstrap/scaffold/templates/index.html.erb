@@ -1,7 +1,7 @@
 <%%= bootstrap_section '<%= plural_name.capitalize %>' do %>
 	<%%= bootstrap_subsection do %>
 	
-	<%%= bootstrap_table(['ID', '', '']) do %>
+	<%%= bootstrap_table(['', '', '']) do %>
 	
 		<%% for <%= plural_name.singularize %> in @<%= plural_name %> %>
 			<%%= bootstrap_table_item do %>

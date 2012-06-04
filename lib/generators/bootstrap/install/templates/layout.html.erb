@@ -2,7 +2,9 @@
 <html>
 <head>
 	<title>Bootstrap</title>
-	<meta charset="utf-8">
+	<meta charset="utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
   
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -32,9 +34,10 @@
 	
 		<%= yield %>
 		
-		<footer class=​"footer">​</footer>
+		<footer class="footer"></footer>
 	</div>
 	
 	<%= javascript_include_tag "application" %>
+	<%= yield :javascript %>
 </body>
 </html>

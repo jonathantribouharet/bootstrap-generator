@@ -32,7 +32,7 @@ module Bootstrap::FormHelper
 		
 		def select(method, choices, options = {}, html_options = {})
 			bootstrap_field(method) do
-				"#{super(method, choices, options)}#{error_field(method)}".html_safe
+				"#{super(method, choices, options, html_options)}#{error_field(method)}".html_safe
 			end
 		end				
 		

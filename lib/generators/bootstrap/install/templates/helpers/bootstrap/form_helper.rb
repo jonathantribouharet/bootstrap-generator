@@ -18,6 +18,12 @@ module Bootstrap::FormHelper
 			end
 		end		
 		
+		def text_area(method, options = {})
+			bootstrap_field(method) do
+				"#{super(method, options)}#{error_field(method)}"
+			end			
+		end
+		
 		def password_field(method, options = {})
 			bootstrap_field(method) do
 				"#{super(method, options)}#{error_field(method)}"

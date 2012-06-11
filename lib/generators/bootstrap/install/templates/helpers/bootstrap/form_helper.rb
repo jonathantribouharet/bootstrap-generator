@@ -117,9 +117,9 @@ module Bootstrap::FormHelper
 		end
 	end	
 
-	def bootstrap_check_box(check_box, method, options = {}, checked_value = "1", unchecked_value = "0")
-		bootstrap_field_tag(check_box) do 
-			check_box(check_box, method, options, checked_value, unchecked_value)
+	def bootstrap_check_box(object_name, method, options = {}, checked_value = "1", unchecked_value = "0")
+		bootstrap_field_tag(object_name) do 
+			check_box(object_name, method, options, checked_value, unchecked_value)
 		end			
 	end
 	

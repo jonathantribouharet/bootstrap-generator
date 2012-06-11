@@ -43,6 +43,12 @@ module Bootstrap::FormHelper
 			end
 		end		
 		
+		def file_field(method, options = {})
+			bootstrap_field(method) do
+				"#{super(method, options)}#{error_field(method)}"
+			end
+		end			
+		
 		def check_box(method, options = {}, checked_value = "1", unchecked_value = "0")
 			bootstrap_field(method) do
 				"<label class='checkbox'>#{super(method, options, checked_value, unchecked_value)}#{options[:text]}</label>#{error_field(method)}".html_safe

@@ -117,6 +117,18 @@ module Bootstrap::FormHelper
 		end
 	end	
 
+	def bootstrap_check_box(check_box, method, options = {}, checked_value = "1", unchecked_value = "0")
+		bootstrap_field_tag(check_box) do 
+			check_box(check_box, method, options, checked_value, unchecked_value)
+		end			
+	end
+	
+	def bootstrap_check_box_tag(name, value = "1", checked = false, options = {})
+		bootstrap_field_tag(name) do 
+			check_box_tag(name, value, checked, options)
+		end	
+	end
+
 	def bootstrap_password_field_tag(object_name, value = nil, options = {})
 		bootstrap_field_tag(object_name) do 
 			password_field_tag(object_name, value, options)

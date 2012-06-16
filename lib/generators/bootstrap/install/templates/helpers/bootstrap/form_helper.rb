@@ -58,7 +58,7 @@ module Bootstrap::FormHelper
 		private
 		
 		def bootstrap_field(method, &block)
-			"<div class='control-group #{have_error?(method) ? 'error' : ''}'><label class='control-label' for='#{@object.class.to_s.downcase + '_' + method.to_s}'>#{method.to_s}</label><div class='controls'>#{yield(block)}</div></div>".html_safe
+			"<div class='control-group #{have_error?(method) ? 'error' : ''}'>#{label method, :class => 'control-label'}<div class='controls'>#{yield(block)}</div></div>".html_safe
 		end
 		
 		def have_error?(method)

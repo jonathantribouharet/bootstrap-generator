@@ -9,7 +9,7 @@ module Bootstrap::BootstrapHelper
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-          </a>'			'
+          </a>'
 				output += link_to(title, root_path, :class => 'brand')
 				output +='
 				<div class="nav-collapse">

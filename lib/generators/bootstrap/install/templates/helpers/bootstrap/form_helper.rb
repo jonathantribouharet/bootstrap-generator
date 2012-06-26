@@ -117,6 +117,12 @@ module Bootstrap::FormHelper
 		end
 	end	
 
+	def bootstrap_text_area_tag(object_name, value = nil, options = {})
+		bootstrap_field_tag(object_name) do 
+			text_area_tag(object_name, value, options)
+		end
+	end		
+
 	def bootstrap_check_box(object_name, method, options = {}, checked_value = "1", unchecked_value = "0")
 		bootstrap_field_tag(object_name) do 
 			check_box(object_name, method, options, checked_value, unchecked_value)

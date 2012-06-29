@@ -1,3 +1,5 @@
+#encoding: utf-8
+
 module Bootstrap::TableHelper
 
 	def bootstrap_table(headers = [], &block)
@@ -14,7 +16,7 @@ module Bootstrap::TableHelper
 				</tr>
 			</thead>
 			<tbody>'
-				output += capture(&block).to_s if block_given?
+				output += capture(&block) if block_given?
 				output +='
 			</tbody>
 		</table>'		
@@ -22,7 +24,7 @@ module Bootstrap::TableHelper
 	end
 
 	def bootstrap_table_item(&block)
-		('<tr>' + capture(&block).to_s + '</tr>').html_safe
+		('<tr>' + capture(&block) + '</tr>').html_safe
 	end
 
 	def bootstrap_table_col(item)
@@ -37,7 +39,7 @@ module Bootstrap::TableHelper
 	end
 
 	def bootstrap_table_col_delete(path)
-		('<td>' + link_to('Supprimer', path, :method => :delete, :confirm => 'Etes-vous sure?') + '</td>').html_safe
+		('<td>' + link_to('Supprimer', path, :method => :delete, :data => {:confirm => 'Etes-vous sûr?'}) + '</td>').html_safe
 	end
 
 end

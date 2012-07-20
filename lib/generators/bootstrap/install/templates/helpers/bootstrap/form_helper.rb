@@ -2,7 +2,7 @@ module Bootstrap::FormHelper
 
 	def bootstrap_form_for(record_or_name_or_array, *args, &block)
 		args[0] ||= {}
-		args[0].merge!({:html=> {:class => "form-horizontal"}, :builder => BootstrapFormBuilder})
+		args[0].deep_merge!({:html=> {:class => "form-horizontal"}, :builder => BootstrapFormBuilder})
 		form_for(record_or_name_or_array, *args, &block)
 	end
 

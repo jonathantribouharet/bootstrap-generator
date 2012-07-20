@@ -43,6 +43,13 @@ module Bootstrap::FormHelper
 			end
 		end		
 		
+		def datetime_select(method, options = {}, html_options = {})
+			bootstrap_field(method) do
+				html_options[:class] = 'input-small'
+				"#{super(method, options, html_options)}#{error_field(method)}".html_safe
+			end
+		end				
+		
 		def file_field(method, options = {})
 			bootstrap_field(method) do
 				"#{super(method, options)}#{error_field(method)}"

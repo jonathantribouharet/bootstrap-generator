@@ -5,7 +5,7 @@
 	
 		<%% for <%= plural_name.singularize %> in @<%= plural_name %> %>
 			<%%= bootstrap_table_item do %>
-				<%%= bootstrap_table_col link_to('Voir', <%= table_name.singularize %>_path(<%= plural_name.singularize %>)) %>
+				<%%= bootstrap_table_col <%= plural_name.singularize %>.name %>
 				<%%= bootstrap_table_col_edit edit_<%= table_name.singularize %>_path(<%= plural_name.singularize %>) %>
 				<%%= bootstrap_table_col_delete <%= table_name.singularize %>_path(<%= plural_name.singularize %>) %>
 			<%% end %>

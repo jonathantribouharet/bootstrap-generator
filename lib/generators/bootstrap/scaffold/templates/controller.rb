@@ -3,11 +3,7 @@ class <%= class_name %>Controller < ApplicationController
 	def index
 		@<%= plural_name %> = <%= plural_name.singularize.capitalize %>.all
 	end
-	
-	def show
-		@<%= plural_name.singularize %> = <%= plural_name.singularize.capitalize %>.find(params[:id])
-	end
-	
+		
 	def new
 		@<%= plural_name.singularize %> = <%= plural_name.singularize.capitalize %>.new
 	end

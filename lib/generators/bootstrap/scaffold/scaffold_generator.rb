@@ -8,7 +8,6 @@ module Bootstrap
 		
 		def create_view_file
 			template "index.html.erb", "app/views/#{file_path}/index.html.erb"
-			template "show.html.erb", "app/views/#{file_path}/show.html.erb"
 			template "new.html.erb", "app/views/#{file_path}/new.html.erb"
 			template "edit.html.erb", "app/views/#{file_path}/edit.html.erb"
 		end

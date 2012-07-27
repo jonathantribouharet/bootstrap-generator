@@ -1,4 +1,4 @@
-<%%= bootstrap_section "Edition : #{@<%= plural_name.singularize %>.to_param}" do %>
+<%%= bootstrap_section "Edition : #{@<%= plural_name.singularize %>.name}" do %>
 	<%%= bootstrap_subsection do %>
 
 		<%%= bootstrap_form_for @<%= plural_name.singularize %>, :url => <%= table_name.singularize %>_path(@<%= plural_name.singularize %>) do |f| %>

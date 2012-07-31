@@ -10,6 +10,7 @@ module Bootstrap
 			template "index.html.erb", "app/views/#{file_path}/index.html.erb"
 			template "new.html.erb", "app/views/#{file_path}/new.html.erb"
 			template "edit.html.erb", "app/views/#{file_path}/edit.html.erb"
+			template "_form.html.erb", "app/views/#{file_path}/_form.html.erb"
 		end
 		
 	end

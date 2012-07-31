@@ -2,8 +2,7 @@
 	<%%= bootstrap_subsection do %>
 
 		<%%= bootstrap_form_for @<%= plural_name.singularize %>, :url => <%= table_name %>_path do |f| %>
-		
-			<%%= f.submit %>
+			<%%= render  'form', :f => f %>
 		<%% end %>
 		
 	<%% end %>

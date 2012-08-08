@@ -87,11 +87,11 @@ module Bootstrap::FormHelper
 	end
 	
 	def bootstrap_field(object_name, method, &block)
-		"<div class='control-group'>#{label object_name, method, t('.' + object_name.to_s  + '.' + method.to_s), :class => 'control-label'}<div class='controls'>#{capture(&block)}</div></div>".html_safe
+		"<div class='control-group'>#{label object_name, method, t('.' + object_name.to_s  + '.' + method.to_s), :class => 'control-label'}<div class='controls'>#{capture(&block).to_s}</div></div>".html_safe
 	end
 	
 	def bootstrap_field_tag(object_name, &block)
-		"<div class='control-group'>#{label_tag object_name, t('.' + object_name.to_s), :class => 'control-label'}<div class='controls'>#{capture(&block)}</div></div>".html_safe
+		"<div class='control-group'>#{label_tag object_name, t('.' + object_name.to_s), :class => 'control-label'}<div class='controls'>#{capture(&block).to_s}</div></div>".html_safe
 	end	
 
 	def bootstrap_date_select(object_name, method, options = {}, html_options = {})

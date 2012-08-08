@@ -16,7 +16,7 @@ module Bootstrap::TableHelper
 				</tr>
 			</thead>
 			<tbody>'
-				output += capture(&block) if block_given?
+				output += capture(&block).to_s if block_given?
 				output +='
 			</tbody>
 		</table>'		
@@ -24,7 +24,7 @@ module Bootstrap::TableHelper
 	end
 
 	def bootstrap_table_item(&block)
-		('<tr>' + capture(&block) + '</tr>').html_safe
+		('<tr>' + capture(&block).to_s + '</tr>').html_safe
 	end
 
 	def bootstrap_table_col(item)

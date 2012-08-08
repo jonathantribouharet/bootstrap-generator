@@ -55,11 +55,11 @@ module Bootstrap::BootstrapHelper
 	end
 
 	def bootstrap_section(title = '', &block)
-		"<section><div class='page-header'><h1>#{title}</h1></div>#{capture(&block)}</section>".html_safe
+		"<section><div class='page-header'><h1>#{title}</h1></div>#{capture(&block).to_s}</section>".html_safe
 	end
 
 	def bootstrap_subsection(title = '', &block)
-		"<div class='row'><h2>#{title}</h2>#{capture(&block)}</div>".html_safe
+		"<div class='row'><h2>#{title}</h2>#{capture(&block).to_s}</div>".html_safe
 	end
 
 	def bootstrap_link_to_button(body, url_options = {}, html_options = {})

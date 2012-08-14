@@ -1,19 +1,19 @@
 <%%= bootstrap_section <%= plural_name.singularize.capitalize %>.model_name.human.pluralize.capitalize do %>
 	<%%= bootstrap_subsection do %>
 	
-	<%%= bootstrap_table(['', '', '']) do %>
-	
-		<%% for <%= plural_name.singularize %> in @<%= plural_name %> %>
-			<%%= bootstrap_table_item do %>
-				<%%= bootstrap_table_col <%= plural_name.singularize %>.name %>
-				<%%= bootstrap_table_col_edit edit_<%= table_name.singularize %>_path(<%= plural_name.singularize %>) %>
-				<%%= bootstrap_table_col_delete <%= table_name.singularize %>_path(<%= plural_name.singularize %>) %>
+		<%%= bootstrap_table(['', '', '']) do %>
+		
+			<%% for <%= plural_name.singularize %> in @<%= plural_name %> %>
+				<%%= bootstrap_table_item do %>
+					<%%= bootstrap_table_col <%= plural_name.singularize %>.name %>
+					<%%= bootstrap_table_col_edit edit_<%= table_name.singularize %>_path(<%= plural_name.singularize %>) %>
+					<%%= bootstrap_table_col_delete <%= table_name.singularize %>_path(<%= plural_name.singularize %>) %>
+				<%% end %>
 			<%% end %>
+		
 		<%% end %>
-	
-	<%% end %>
 
-	<%%= bootstrap_link_to_button('Nouveau', new_<%= table_name.singularize %>_path) %>
+		<%%= bootstrap_link_to_button('Nouveau', new_<%= table_name.singularize %>_path) %>
 
 	<%% end %>
 <%% end %>
